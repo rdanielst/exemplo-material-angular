@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Exemplo</h2>
+
+<mat-dialog-content>
+    <div class="form">
+        <form [formGroup]="form">
+            <mat-form-field appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input type="text" matInput formControlName="nome">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Idade</mat-label>
+                <input type="number" matInput formControlName="idade">
+            </mat-form-field>
+        </form>
+
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-raised-button color="accent" (click)="onClose()" cdkFocusInitial>Salvar</button>
+</mat-dialog-actions>
